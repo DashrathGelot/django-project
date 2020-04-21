@@ -1,0 +1,71 @@
+{%load static%}
+<html>
+    <head>
+        <title>student</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+                .data{background-color: rgba(15, 112, 48, 0.192);
+                margin-left:30%;
+                width:30%;
+                }
+                .reg{
+                    margin:3em 0 0 7em;
+                }
+                .top{
+                    background-color:cornflowerblue;
+                    height:10%;
+                    Width:100%;
+                }
+                .tit{
+                    color:black;
+                    font-size:2em;
+                    font-weight: bold;
+                    padding:0.5em 0 0 1em;
+                }
+                </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class="tit">Hello</div>
+        </div>
+        <form method="POST">
+            <div class="data">
+            <div class="reg"><h1>Register</h1></div>
+            <table>
+                    <tr>
+                            <td>{%csrf_token%}{{key}}</td>
+                    </tr>
+                    <tr>
+                            <td> <input type="submit" value="sub"></td>
+                            <td><button type="reset">Reset</button></td>
+                    </tr>
+                </table>
+            </div> 
+        </form>
+        <h1>Your Data Is Here</h1>
+        <table>
+            <tr>
+                <td>Enrollment_No</td>
+                <td>Name</td>
+                <td>BirthDate</td>
+                <td>Branch</td>
+                <td>Mobile_NO</td>
+                <td>Email</td>
+                <td>City</td>
+                <td>Annual Income</td>
+            </tr>
+            {%for i in data%}
+                <tr>
+                        <td>{{i.Enrollment_No}}</td>
+                        <td>{{i.Name}}</td>
+                        <td>{{i.BirthDate}}</td>
+                        <td>{{i.Branch}}</td>
+                        <td>{{i.Mobile_NO}}</td>
+                        <td>{{i.Email}}</td>
+                        <td>{{i.City}}</td>
+                        <td>{{i.Annual_Income}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+    </body>
+</html>
