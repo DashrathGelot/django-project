@@ -1,14 +1,19 @@
 ### simple snake pygame project 
 
 ### for run application
-#library
-1.pygame 
 
-step 1:
-#install python
-step 2:
-#intall pygame
+# to installation of pygame
+
+``` 
+pip install pygame
+```
+ 
+###### step 1:
+## install python
+###### step 2:
+## install pygame
 ### `pip install pygame`
-step3:
-### to run program
+###### step3:
+
+### to run program :
 # python snake.py
